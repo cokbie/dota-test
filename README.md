@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Clone repository
 ```sh
-$ git clone 
+$ git clone https://github.com/cokbie/dota-test.git
 $ cd dota-test
 $ npm install
 ```
