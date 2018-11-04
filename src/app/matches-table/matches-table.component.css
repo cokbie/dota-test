@@ -1,0 +1,24 @@
+.mat-header-row {
+	background: #4d3078;
+}
+
+.mat-sort-header-button {color: #fff}
+
+.mat-header-cell {
+	font-weight: bold;
+	font-size: 15px;
+	color: #fff;
+}
+
+
+.mat-column-league_name {
+	margin-right: 50px;
+}
+
+.mat-column-duration {
+	max-width: 150px;
+}
+
+.mat-cell {
+	font-size: 13px;
+}
