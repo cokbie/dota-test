@@ -1,3 +1,4 @@
+// Interface between API Source and Client
 export interface ProMatch {
 	match_id: number;
 	duration: number;

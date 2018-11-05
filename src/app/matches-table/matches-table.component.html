@@ -2,7 +2,7 @@
 <app-table-filter (filterEntered)="applyFilter($event)"></app-table-filter>
 
 <!-- Matches Table -->
-<div class="mat-elevation-z8 style=background-color: red;">
+<div class="mat-elevation-z8">
 	<mat-table [dataSource]="dataSource" matSort>
 		<!-- League Column -->
 		<ng-container matColumnDef="league_name">
@@ -13,19 +13,26 @@
 		<!-- Duration Column -->
 		<ng-container matColumnDef="duration">
 			<mat-header-cell *matHeaderCellDef mat-sort-header> Duration </mat-header-cell>
+			<!--Pipe for match duration -->
 			<mat-cell *matCellDef="let element"> {{ element.duration | matchDuration }} </mat-cell>
 		</ng-container>
 
 		<!-- Radiant Team Column -->
 		<ng-container matColumnDef="radiant_name">
 			<mat-header-cell *matHeaderCellDef> Radiant </mat-header-cell>
-			<mat-cell *matCellDef="let element"> <app-icon-svg *ngIf="element.radiant_win"></app-icon-svg> {{ element.radiant_name }} </mat-cell>
+			<mat-cell *matCellDef="let element">
+				<!-- Display crown icon if radiant wins --> 
+				<app-icon-svg *ngIf="element.radiant_win"></app-icon-svg> {{ element.radiant_name }} 
+			</mat-cell>
 		</ng-container>
 
 		<!-- Dire Team Column -->
 		<ng-container matColumnDef="dire_name">
 			<mat-header-cell *matHeaderCellDef> Dire </mat-header-cell>
-			<mat-cell *matCellDef="let element"> <app-icon-svg *ngIf="element.radiant_win == false"></app-icon-svg> {{ element.dire_name }} </mat-cell>
+			<mat-cell *matCellDef="let element">
+				<!-- Display crown icon if dire wins -->
+				<app-icon-svg *ngIf="element.radiant_win == false"></app-icon-svg> {{ element.dire_name }} 
+			</mat-cell>
 		</ng-container>
 
 		<!-- Match ID Column -->
@@ -34,7 +41,7 @@
 			<mat-cell *matCellDef="let element"> {{ element.match_id }} </mat-cell>
 		</ng-container>
 
-
+		<!-- Table Rows to display -->
 		<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 		<mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
 	</mat-table>

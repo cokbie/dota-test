@@ -10,6 +10,7 @@ import { MatIconRegistry } from '@angular/material';
 export class IconSvgComponent {
 
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  	// Register crown icon for winner
   	iconRegistry.addSvgIcon(
   		'crown',
   		sanitizer.bypassSecurityTrustResourceUrl('./../assets/img/crown-solid.svg')

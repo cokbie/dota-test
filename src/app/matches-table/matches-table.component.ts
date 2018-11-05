@@ -26,11 +26,16 @@ export class MatchesTableComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		// Load Table 
 		this.data.getProMatches().subscribe(
 		  (MatchesTable) => {
+		  	// Get Data Source
 		  	this.dataSource = new MatTableDataSource<ProMatch>(MatchesTable);
+		  	// Sorting using Material
 		  	this.dataSource.sort = this.sort;
+		  	// Pagination using Material
 		  	this.dataSource.paginator = this.paginator;
+		  	// Filtering/Searching for League Name
 		  	this.dataSource.filterPredicate = (data: ProMatch, filter: string) => {
 		  		let regex = new RegExp(`^${filter}`);
 		  		return regex.test(data.league_name.toLowerCase());

@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 
+// Get API from Host
 export class MatchService {
 
   constructor(private http: HttpClient) { }

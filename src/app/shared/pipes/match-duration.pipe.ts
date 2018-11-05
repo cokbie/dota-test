@@ -3,6 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'matchDuration'
 })
+
+// Duration Pipe to edit output
 export class MatchDurationPipe implements PipeTransform {
 
   transform(value: number): string {
