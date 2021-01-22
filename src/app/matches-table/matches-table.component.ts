@@ -1,12 +1,14 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+import { MatPaginator } from '@angular/material/paginator';
 import { ProMatch } from './../shared/interfaces/pro-match';
 import { MatchService } from './../shared/services/match.service';
 
 @Component({
 	selector: 'app-matches-table',
-	templateUrl: './matches-table.component.html',
-	styleUrls: ['./matches-table.component.css']
+	templateUrl: 'matches-table.component.html',
+	styleUrls: ['matches-table.component.css']
 })
 export class MatchesTableComponent implements OnInit {
 	
