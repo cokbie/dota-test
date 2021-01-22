@@ -24,6 +24,7 @@ import { TableFilterComponent } from './table-filter/table-filter.component';
     AppComponent,
     MatchesTableComponent,
     MatchDurationPipe,
+	IconSvgComponent,
     TableFilterComponent
   ],
   imports: [
